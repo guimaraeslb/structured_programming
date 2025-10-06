@@ -1,13 +1,4 @@
-#define arranjos_h
-
-void imprimir_arranjo(int valores[], int n);
-int remover_valor(int valores[], int n, int valor);
-
-void imprimir_arranjo(int valores[], int n){
-    for(int i = 0; i < n; i++){
-        printf("%d ", valores[i]);
-    }
-}
+#include <stdio.h>
 
 int remover_valor(int valores[], int n, int valor){
     int contador = 0;
@@ -20,4 +11,11 @@ int remover_valor(int valores[], int n, int valor){
         }
     }
     return contador;
+}
+
+
+int main(void){
+    int valores [] = {1,2,1,4};
+    printf("Quantidade de elementos removidos: %d", remover_valor(valores, 4, 1));
+    return 0;
 }
