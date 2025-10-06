@@ -35,6 +35,27 @@ double get_media(double soma, int n){
     return media;
 }  
 
+void maior_nota(double notas[], int n){
+    double maior_nota = notas[0];
+    for(int i = 0; i < n; i++){
+        if(notas[i] > maior_nota){
+            maior_nota = notas[i];
+        }
+    }
+    printf("A maior nota foi: %f", maior_nota);
+}
+
+void menor_nota(double notas[], int n){
+    double menor_nota = notas[0];
+    for(int i = 0; i < n; i++){
+        if(notas[i] < menor_nota){
+            menor_nota = notas[i];
+        }
+    }
+    printf("A menor nota foi: %f", menor_nota);
+}
+
+
 void get_notas(double notas[], int n){
     for(int i = 0; i < n; i++){
         scanf("%lf", &notas[i]);
@@ -50,7 +71,7 @@ int main(void){
     int n;
     double *notas;
     scanf("%d", &n);
-    notas = (double*) malloc(n*sizeof(int));
+    notas = malloc(n*sizeof(int));
     get_notas(notas, n);
     return 0;
 }
