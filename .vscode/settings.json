@@ -59,6 +59,7 @@
   "files.associations": {
     "*.dbclient-js": "javascript",
     "stdio.h": "c",
-    "arranjos.h": "c"
+    "arranjos.h": "c",
+    "stdlib.h": "c"
   }
 }
