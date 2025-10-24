@@ -10,12 +10,12 @@ void mostrar_arranjo(int* arranjo, unsigned size){
 int* concantenar_arranjos(int* primeiro_arranjo, unsigned n, int* segundo_arranjo, unsigned m){
     int *arranjo_concatenado = malloc(sizeof(int)*(n+m));
 
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < (int) n; i++){
         arranjo_concatenado[i] = primeiro_arranjo[i];
     }
 
-    for(int j = n; j < (n+m); j++){
-        arranjo_concatenado[j] = segundo_arranjo[j-n];
+    for(int j = 0; j < (int) m; j++){
+        arranjo_concatenado[n+j] = segundo_arranjo[j];
     }
     return arranjo_concatenado;
 }
